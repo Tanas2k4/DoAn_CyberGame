@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QLCGDataSet1" targetNamespace="http://tempuri.org/QLCGDataSet1.xsd" xmlns:mstns="http://tempuri.org/QLCGDataSet1.xsd" xmlns="http://tempuri.org/QLCGDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLCGConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLCGConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GUI.Properties.Settings.GlobalReference.Default.QLCGConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrdersTableAdapter" GeneratorDataComponentClassName="OrdersTableAdapter" Name="Orders" UserDataComponentName="OrdersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLCGConnectionString (Settings)" DbObjectName="QLCG.dbo.Orders" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FoodItemId, Quantity, Price FROM dbo.Orders</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FoodItemId" DataSetColumn="FoodItemId" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QLCGDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="QLCGDataSet1" msprop:Generator_DataSetName="QLCGDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Orders" msprop:Generator_RowEvHandlerName="OrdersRowChangeEventHandler" msprop:Generator_RowDeletedName="OrdersRowDeleted" msprop:Generator_RowDeletingName="OrdersRowDeleting" msprop:Generator_RowEvArgName="OrdersRowChangeEvent" msprop:Generator_TablePropName="Orders" msprop:Generator_RowChangedName="OrdersRowChanged" msprop:Generator_RowChangingName="OrdersRowChanging" msprop:Generator_TableClassName="OrdersDataTable" msprop:Generator_RowClassName="OrdersRow" msprop:Generator_TableVarName="tableOrders" msprop:Generator_UserTableName="Orders">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FoodItemId" msprop:Generator_ColumnPropNameInRow="FoodItemId" msprop:Generator_ColumnPropNameInTable="FoodItemIdColumn" msprop:Generator_ColumnVarNameInTable="columnFoodItemId" msprop:Generator_UserColumnName="FoodItemId" type="xs:int" />
+              <xs:element name="Quantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_UserColumnName="Quantity" type="xs:int" />
+              <xs:element name="Price" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_UserColumnName="Price" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
